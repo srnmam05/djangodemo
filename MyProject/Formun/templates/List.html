@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+{% include "UpBar.html" %}
+<div class="col-lg-6" style="margin-top: 20px; text-align: left;">
+    <form action="/Formun/Search/" method="post">
+        {% csrf_token %}
+        <input type="text" size="20" style="size: 50px;" name="search">
+        <input type="submit" value="搜尋">
+    </form>
+</div>
+
+<table class="table table-striped col-lg-6">
+    <thead>
+        <th>
+            <h3>標題</h3>
+        </th>
+    </thead>
+    <tbody>
+        {% for i in list %}
+        <tr>
+            <td>
+                <a href="{% url 'Content' pk=i.pk %}">{{i.Title}}</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

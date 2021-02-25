@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <h1 class="mt-2">爬蟲，設定最多一次爬取5頁</h1>
+    <hr class="mt-0 mb-4">
+    <p>要爬取的網頁是 PTT 八卦版：</p>
+    <form action="/crawler/POST_crawl/"method="post">{% csrf_token %}
+    你想要幾頁的資料:<input type="text" name="title">
+    
+    <input type="submit"value="送出">
+
+    {% if error != None %}
+    <br/>
+    <h2 style="color: red;">{{error}}</h2>
+    {% endif %}
+</form>
+</div>
+{% include "crawl_result.html" %}
+{% endblock %}

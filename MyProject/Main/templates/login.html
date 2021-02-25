@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content%}
+<h3>註冊</h3>
+
+<form action="/Main/login_/" method="POST">
+    {% csrf_token %}
+    {{ form }}
+
+    <br />
+    <input class="btn btn-sucess" type="submit" value="註冊">
+</form>
+{{inform}}
+{% endblock%}

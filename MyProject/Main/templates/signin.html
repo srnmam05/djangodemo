@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% load socialaccount %}
+{% block content%}
+<h3>登入</h3>
+
+<form action="/Main/signin" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    
+    <br />
+    <input class="btn btn-sucess" type="submit" value="登入">
+    <a class="btn btn-danger" href="{% provider_login_url 'google' method='oauth2' %}">Google登入</a>
+    <a href="{% url 'login_' %}}" class="btn btn-sucess" style="background-color:lavender">註冊</a>
+</form>
+{% endblock%}

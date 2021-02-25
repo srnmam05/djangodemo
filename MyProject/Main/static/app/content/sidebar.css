@@ -1,0 +1,39 @@
+#sidebar {
+  height:100%;
+  width:160px;
+  position: fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  background-color:gainsboro;
+  padding-top:20px;
+}    
+
+#sidebar a {
+  padding:6px 8px 6px 16px;
+  text-decoration: none;
+  font-size:25px;
+  color: #818181;
+  display:block;
+}  
+
+#sidebar a:hover{
+  color:darkslategray;
+}     
+
+.main{
+  margin-left:180px;
+  padding: 0px 10px;
+}  
+
+#wrapper {
+  overflow-x: hidden;
+}
+
+#sidebar .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 2.5rem;
+  margin-left: -16px;
+}
+
+

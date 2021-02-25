@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% if articlenumber != 0 %}
+
+	<h2>爬取的結果如下：共{{articlenumber}}篇文章</h2>
+	<table class="table table-striped col-lg-6">
+		<thread>
+			<th>作者</th>
+			<th>標題</th>
+		</thread>
+		<tbody>
+			{% for i in total %}
+			<tr>
+				<td>{{i.0}}</td>
+				<td><a href={{i.2}}>{{i.1}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	
+	{% endif %}
+{% endblock %}

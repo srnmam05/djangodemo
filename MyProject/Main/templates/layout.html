@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Django練習專案</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/sidebar.css' %}" />
+</head>
+
+<body>
+  <div id="sidebar" class="bg-light border-right">
+    <div class="sidebar-heading"><img
+        src="data:image/jpeg;base64,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">
+    </div>
+    <div class="list-group">
+      <a href="/" class="list-group-item list-group-item-action bg-light" style="background-color: gainsboro;">首頁</a>
+      <a href="{% url 'FormunIndex' %}" class="list-group-item list-group-item-action bg-light"
+        style="background-color: gainsboro;">論壇</a>
+      <a href="{% url 'crawl' %}" class="list-group-item list-group-item-action bg-light"
+        style="background-color: gainsboro;">爬蟲</a>
+      {% if user.is_authenticated %}
+      <div style="background-color: lavender; text-align: center;">
+        <h3>您好:</h3>
+        <h3>{{request.user.username}}</h3>
+      </div>
+      <button type="button" class="btn btn-primary" style="margin-left: 10px;" onclick="mess()">
+        <a href="{% url 'logout_' %}" style="color: white;">登出</a>
+      </button>
+      {% else %}
+      <button type="button" class="btn btn-primary" style="margin-left: 10px;">
+        <a href="{% url 'signin' %}" style="color: white;">登入</a>
+      </button>
+      {% endif %}
+    </div>
+  </div>
+
+  <div id="content" name="content" class="main">
+    <div class="row justify-content-center">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+  <script>
+    function mess() {
+      alert("已登出!");
+    };
+  </script>
+  <script src="{% static 'app/scripts/jquery.min.js' %}"></script>
+  <script src="{% static 'app/scripts/bootstrap.bundle.js' %}"></script>
+  <script src="{% static 'app/scripts/jquery.bootstrap.modal.forms.js' %}"></script>
+  <script src="{% static 'app/scripts/jquery.bootstrap.modal.forms.min.js' %}"></script>
+</body>
+
+</html>

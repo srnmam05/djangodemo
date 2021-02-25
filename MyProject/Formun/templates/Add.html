@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content%}
+{% include "UpBar.html" %}
+<h3>新增</h3>
+
+<form action="/Formun/List/Add" method="POST">
+    {% csrf_token %}
+    <div class="col-lg-12">
+        {{ form }}
+        <input type="text" name="user" value={{request.user.username}} style="display: none;">
+    </div>
+    <br />
+    <input class="btn btn-sucess" type="submit" value="儲存">
+</form>
+{% endblock%}
